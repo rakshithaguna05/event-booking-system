@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Booking Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Event Booking System</h1>
+    <p>Book your spot for exciting events!</p>
+  </header>
 
+  <main>
+    <section id="event-list">
+      <h2>Available Events</h2>
+      <ul>
+        <li>
+          <h3>Music Concert</h3>
+          <p>Date: 10th Feb 2025</p>
+          <button onclick="document.getElementById('booking-form').style.display='block'">Book Now</button>
+        </li>
+        <li>
+          <h3>Art Exhibition</h3>
+          <p>Date: 15th Feb 2025</p>
+          <button onclick="document.getElementById('booking-form').style.display='block'">Book Now</button>
+        </li>
+        <li>
+          <h3>Tech Talk</h3>
+          <p>Date: 20th Feb 2025</p>
+          <button onclick="document.getElementById('booking-form').style.display='block'">Book Now</button>
+        </li>
+      </ul>
+    </section>
+
+    <section id="booking-form" style="display: none;">
+      <h2>Book Your Event</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="event-name">Event Name:</label>
+        <select id="event-name" name="event-name" required>
+          <option value="Music Concert">Music Concert</option>
+          <option value="Art Exhibition">Art Exhibition</option>
+          <option value="Tech Talk">Tech Talk</option>
+        </select>
+        
+        <button type="submit">Submit</button>
+      </form>
+      <button onclick="document.getElementById('booking-form').style.display='none'">Close</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Event Booking System. All rights reserved.</p>
+  </footer>
+</body>
+</html>
